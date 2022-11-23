@@ -1,0 +1,43 @@
+// Vitest Snapshot v1
+
+exports[`Testing TodoAdd Component > Should match the snapshot 1`] = `
+<div>
+  <div
+    class="re-TodoAdd"
+  >
+    <div
+      class="re-TodoAdd-wrapInputs"
+    >
+      <label
+        class="re-TodoAdd-label"
+        for=""
+      >
+        Name
+        <input
+          class="re-TodoAdd-input"
+          placeholder="Todo Name"
+          type="text"
+          value=""
+        />
+      </label>
+      <label
+        class="re-TodoAdd-label"
+        for=""
+      >
+        Description
+        <input
+          class="re-TodoAdd-input"
+          placeholder="Todo Description"
+          type="text"
+          value=""
+        />
+      </label>
+    </div>
+    <button
+      class="re-TodoAdd-button"
+    >
+      Add Todo
+    </button>
+  </div>
+</div>
+`;

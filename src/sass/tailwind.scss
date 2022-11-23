@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply min-h-screen bg-[#f8f8ff];
+	}
+}
+
+@layer components {
+	.re-TodoApp {
+		@apply xl:max-w-6xl mx-auto p-6;
+	}
+
+	.re-TodoTitle {
+		@apply text-center text-4xl sm:text-5xl text-[#646681] font-bold mb-6 uppercase;
+	}
+
+	.re-TodoAdd {
+		@apply flex flex-col sm:flex-row gap-8 sm:gap-0 sm:justify-between sm:items-center p-4 bg-[#ecedf6] mb-6 rounded-lg;
+		&-wrapInputs {
+			@apply flex flex-col sm:flex-row gap-6 text-[#646681];
+		}
+
+		&-label {
+			@apply flex flex-col;
+		}
+
+		&-input {
+			@apply focus:border-[1px] focus:outline-1 focus:outline-black border-none rounded-xl text-black p-2 text-lg;
+		}
+
+		&-button {
+			@apply bg-[#646ff0] sm:mt-4 px-4 py-3 rounded-3xl text-white;
+		}
+	}
+
+	.re-TodoList {
+		@apply flex flex-col gap-2 bg-[#ecedf6] p-4 rounded-lg;
+	}
+
+	.re-TodoItem {
+		@apply flex flex-col gap-4  xl:gap-0 sm:flex-row sm:justify-between xl:items-center p-4 bg-white rounded-lg text-[#585858];
+		&-wrapBodyText {
+		}
+
+		&-title {
+			@apply text-2xl sm:text-3xl font-semibold;
+		}
+		&-description {
+			@apply text-base;
+		}
+		&-button {
+			@apply bg-white block w-[6.7rem] py-2 px-4  rounded-3xl border-2;
+		}
+		&-wrapButtons {
+			@apply flex justify-between items-center gap-4;
+		}
+	}
+	.TodoItem-button {
+		&--completed {
+			@apply border-green-500  text-green-500;
+		}
+		&--deleted {
+			@apply border-red-500 text-red-500;
+		}
+	}
+
+	.re-TodoEmpty {
+		@apply text-center bg-[#dedfe1] w-max mx-auto py-2 px-4 rounded-lg;
+	}
+}
+
+@layer utilities {
+	.isCompleted {
+		color: rgb(145, 145, 145);
+		text-decoration: line-through;
+		text-decoration-color: rgb(145, 145, 145);
+		opacity: 0.7;
+
+		&--text {
+			color: rgb(145, 145, 145);
+			text-decoration: line-through;
+			text-decoration-color: rgb(145, 145, 145);
+		}
+	}
+
+	.isCompleted--btn {
+		display: none;
+	}
+}
